@@ -1,0 +1,12 @@
+# Stareto robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /profile/
+Disallow: /bucket/
+Disallow: /messenger/
+Disallow: /feed/
+Disallow: /connections/
+Disallow: /events/
+Sitemap: https://stareto.com/sitemap.xml
