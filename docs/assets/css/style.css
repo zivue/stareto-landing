@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 50% 36%, rgba(33, 133, 208, 0.12), transparent 28rem),
+    radial-gradient(circle at 50% 18%, rgba(33, 133, 208, 0.12), transparent 30rem),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
   color: var(--text);
 }
@@ -98,14 +98,12 @@ main {
 }
 
 .hero {
-  min-height: calc(100vh - 9.5rem);
   width: min(100%, 68rem);
   margin: 0 auto;
-  padding: 5rem 1.5rem 6rem;
+  padding: 4rem 1.5rem 3.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
@@ -113,7 +111,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 0 4rem;
+  margin: 0 0 2.25rem;
   padding: 0.25rem 0.75rem;
   border: 1px solid var(--surface);
   border-radius: 999px;
@@ -161,7 +159,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   color: var(--text-tertiary);
   font-size: 0.875rem;
 }
@@ -184,6 +182,23 @@ h1 {
   font-size: 0.75rem;
 }
 
+.hero-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 42rem;
+}
+
+.hero-summary span {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(166, 173, 200, 0.16);
+  border-radius: 999px;
+  background: rgba(17, 17, 27, 0.28);
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+}
+
 .section-intro,
 .features,
 .details {
@@ -193,7 +208,9 @@ h1 {
 }
 
 .section-intro {
+  padding-top: 2.5rem;
   padding-bottom: 1.5rem;
+  border-top: 1px solid var(--surface);
 }
 
 .section-intro .eyebrow {
@@ -229,25 +246,21 @@ h1 {
 
 .features {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 
 .details {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   padding-bottom: 5rem;
 }
 
 .features article,
 .details article {
-  min-height: 12rem;
+  min-height: 9.5rem;
   padding: 1.25rem;
   border: 1px solid var(--surface);
   border-radius: 0.5rem;
   background: color-mix(in srgb, var(--surface-soft) 78%, transparent);
-}
-
-.details article {
-  min-height: 10rem;
 }
 
 .features h2,
@@ -351,8 +364,9 @@ h1 {
 @media (max-width: 720px) {
   .site-header,
   .site-footer {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .nav,
@@ -362,12 +376,11 @@ h1 {
   }
 
   .hero {
-    min-height: auto;
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 
   .status {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .features,
